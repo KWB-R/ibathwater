@@ -1,9 +1,12 @@
 on:
   push:
     branches:
-      - main
       - master
-      - dev
+
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # Run this job every day at 06:00 a.m. UTC ('0 5 * * *')
+    - cron:  '0 6 * * *'
 
 name: pkgdown
 
@@ -12,6 +15,9 @@ jobs:
     runs-on: macOS-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      IBATH_DJANGO_ADMIN_PW: ${{ secrets.IBATH_DJANGO_ADMIN_PW }}
+      IBATH_DJANGO_ADMIN_URL: ${{ secrets.IBATH_DJANGO_ADMIN_URL }}
+      IBATH_DJANGO_ADMIN_USER: ${{ secrets.IBATH_DJANGO_ADMIN_USER }}
     steps:
       - uses: actions/checkout@v2
 
