@@ -6,7 +6,14 @@ Authors@R:
              family = "Seis",
              role = c("aut", "cre"),
              email = "wolfgang.seis@kompetenz-wasser.de",
-             comment = c(ORCID = "0000-0002-7436-8575")),
+             comment = c(ORCID = "0000-0002-7436-8575"),
+      person(given = "Michael",
+             family = "Rustler",
+             role = c("ctb"),
+             email = "michael.rustler@kompetenz-wasser.de",
+             comment = c(ORCID = "0000-0003-0647-7726")),
+      person(given = "iBathWater",
+             role = "fnd"),
       person(given = "Kompetenzzentrum Wasser Berlin gGmbH (KWB)",
              role = "cph"))
 Description: R Package for Predicting Water Quality at Flussbad.
@@ -19,6 +26,13 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Suggests: 
     covr,
+    httr,
     knitr,
-    rmarkdown
+    kwb.dwd,
+    kwb.flusshygiene,
+    rmarkdown,
+    rstanarm
+Remotes:
+    github::kwb-r/kwb.dwd,
+    github::kwb-r/kwb.flusshygiene    
 VignetteBuilder: knitr

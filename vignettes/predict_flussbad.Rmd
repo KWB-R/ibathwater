@@ -1,8 +1,8 @@
 ---
-title: "documention"
+title: "Predict Flussbad"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{documention}
+  %\VignetteIndexEntry{Predict Flussbad}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+is_ghactions <- identical(Sys.getenv("CI"), "true")
 ```
 
 ```{r setup}
