@@ -1,0 +1,24 @@
+Package: ibathwater
+Title: R Package for Predicting Water Quality at Flussbad
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Wolfgang",
+             family = "Seis",
+             role = c("aut", "cre"),
+             email = "wolfgang.seis@kompetenz-wasser.de",
+             comment = c(ORCID = "0000-0002-7436-8575")),
+      person(given = "Kompetenzzentrum Wasser Berlin gGmbH (KWB)",
+             role = "cph"))
+Description: R Package for Predicting Water Quality at Flussbad.
+License: MIT + file LICENSE
+URL: https://github.com/KWB-R/ibathwater
+BugReports: https://github.com/KWB-R/ibathwater/issues
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    covr,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
